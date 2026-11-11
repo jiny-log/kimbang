@@ -38,9 +38,11 @@
 
 @media (max-width: 760px) {
   .floating-booking:not([hidden]) {
-    inset: auto 0 0;
-    min-height: calc(48px + env(safe-area-inset-bottom, 0px));
-    padding: 8px 18px calc(8px + env(safe-area-inset-bottom, 0px));
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    left: calc(12px + env(safe-area-inset-left, 0px));
+    min-height: 44px;
+    padding: 8px 18px;
+    border-radius: 4px;
   }
 
   main .past-performances {
