@@ -8,6 +8,24 @@
 @media(min-width:761px){.hero-title{left:6%;right:auto;width:43%}.hero-title h1{font-size:clamp(48px,8.5vw,125px)}}
 @media(max-width:760px){.hero-title{left:9%;right:9%;width:auto;top:5%}.hero-title h1{font-size:clamp(40px,18vw,130px);letter-spacing:-.035em;line-height:1.25}.hero-title p{font-size:clamp(12px,3.5vw,16px)}}
 
+.booking {
+  padding: 40px 8%;
+  text-align: center;
+}
+.booking p {
+  margin: 0 0 14px;
+}
+.booking-link {
+  display: inline-block;
+  padding: 12px 32px;
+  border: 1px solid #454941;
+  background: #454941;
+  color: #fff;
+}
+.booking-link:hover {
+  background: #343830;
+}
+
 .past-performances {
   padding: 80px 8%;
   background: #fafaf8;
