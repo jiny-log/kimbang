@@ -9,8 +9,7 @@
 @media(max-width:760px){.hero-title{left:9%;right:9%;width:auto;top:5%}.hero-title h1{font-size:clamp(40px,18vw,130px);letter-spacing:-.035em;line-height:1.25}.hero-title p{font-size:clamp(12px,3.5vw,16px)}}
 
 .booking {
-  padding: 40px 8%;
-  text-align: center;
+  padding: 80px 8%;
 }
 .booking p {
   margin: 0 0 14px;
@@ -62,7 +61,15 @@
   text-decoration: underline;
 }
 @media (max-width: 760px) {
-  .past-performances { padding: 60px 8%; }
+  header { gap: 10px; }
+  header .brand { white-space: nowrap; }
+  header nav {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 6px 12px;
+  }
+  header nav a { white-space: nowrap; }
+  .booking, .past-performances { padding: 60px 8%; }
   .performance-grid { grid-template-columns: 1fr; }
 }
 
