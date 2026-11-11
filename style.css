@@ -7,3 +7,43 @@
 .hero-title h1{white-space:nowrap;letter-spacing:-.035em;line-height:1.25;font-size:clamp(48px,8.5vw,125px)}
 @media(min-width:761px){.hero-title{left:6%;right:auto;width:43%}.hero-title h1{font-size:clamp(48px,8.5vw,125px)}}
 @media(max-width:760px){.hero-title{left:9%;right:9%;width:auto;top:5%}.hero-title h1{font-size:clamp(40px,18vw,130px);letter-spacing:-.035em;line-height:1.25}.hero-title p{font-size:clamp(12px,3.5vw,16px)}}
+
+.past-performances {
+  padding: 80px 8%;
+  background: #fafaf8;
+}
+.performance-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 36px;
+}
+.performance-grid article {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.performance-grid .eyebrow { margin-bottom: 10px; }
+.performance-grid h3 {
+  margin: 0 0 16px;
+  font-size: clamp(17px, 2vw, 23px);
+  line-height: 1.5;
+  font-weight: 500;
+}
+.performance-grid iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  margin-top: auto;
+  background: #242624;
+}
+.performance-grid a {
+  align-self: flex-start;
+  margin-top: 12px;
+  font-size: 14px;
+  text-decoration: underline;
+}
+@media (max-width: 760px) {
+  .past-performances { padding: 60px 8%; }
+  .performance-grid { grid-template-columns: 1fr; }
+}
