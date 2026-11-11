@@ -49,19 +49,12 @@
 }
 
 @font-face {
-  font-family: 'Eulyoo1945 Local';
-  src: local('Eulyoo1945-Regular'), local('Eulyoo1945 Regular'), local('을유1945 Regular');
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'Eulyoo1945 Local';
-  src: local('Eulyoo1945-SemiBold'), local('Eulyoo1945 SemiBold'), local('을유1945 SemiBold');
-  font-style: normal;
-  font-weight: 600 700;
+  font-family: 'MapoFlowerIsland';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
+  font-weight: normal;
+  font-display: swap;
 }
 
 body {
-  font-family: 'Eulyoo1945 Local', Georgia, 'Batang', '바탕', serif;
+  font-family: 'MapoFlowerIsland', Georgia, 'Batang', '바탕', serif;
 }
