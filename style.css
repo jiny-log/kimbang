@@ -49,12 +49,12 @@
 }
 
 @font-face {
-  font-family: 'MapoFlowerIsland';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
+  font-family: 'KbizHanmaumMyungjo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KBIZHanmaumMyungjo.woff') format('woff');
   font-weight: normal;
   font-display: swap;
 }
 
 body {
-  font-family: 'MapoFlowerIsland', Georgia, 'Batang', '바탕', serif;
+  font-family: 'KbizHanmaumMyungjo', Georgia, 'Batang', '바탕', serif;
 }
