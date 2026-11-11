@@ -47,3 +47,21 @@
   .past-performances { padding: 60px 8%; }
   .performance-grid { grid-template-columns: 1fr; }
 }
+
+@font-face {
+  font-family: 'Eulyoo1945 Local';
+  src: local('Eulyoo1945-Regular'), local('Eulyoo1945 Regular'), local('을유1945 Regular');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Eulyoo1945 Local';
+  src: local('Eulyoo1945-SemiBold'), local('Eulyoo1945 SemiBold'), local('을유1945 SemiBold');
+  font-style: normal;
+  font-weight: 600 700;
+}
+
+body {
+  font-family: 'Eulyoo1945 Local', Georgia, 'Batang', '바탕', serif;
+}
