@@ -21,18 +21,14 @@ const container=document.querySelector('#tracks');
 tracks.forEach(([title,meta,copy],i)=>{const article=document.createElement('article');article.className='track';const number=document.createElement('span');number.className='number';number.textContent=String(i+1).padStart(2,'0');const body=document.createElement('div');const heading=document.createElement('h3');heading.textContent=title;const credit=document.createElement('div');credit.className='meta';credit.textContent=meta;const p=document.createElement('p');p.textContent=copy;body.append(heading,credit,p);article.append(number,body);container.append(article)});
 const dialog=document.querySelector('dialog');const labels=['표지 · 도움주신 분들','인사말','프로그램','출연진 소개'];labels.forEach((label,i)=>{const button=document.createElement('button');const img=document.createElement('img');img.src=`assets/spread-${i+1}.${i===0?'png':'jpg'}`;img.alt=label+' 원본 펼침면';img.loading='lazy';const caption=document.createElement('span');caption.textContent=`0${i+1} / ${label} ↗`;button.append(img,caption);button.addEventListener('click',()=>{dialog.querySelector('img').src=img.src;dialog.querySelector('img').alt=img.alt;dialog.showModal()});document.querySelector('.spreads').append(button)});document.querySelector('.close').onclick=()=>dialog.close();dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
 
-const mobileBooking = document.querySelector('.mobile-booking');
+const floatingBooking = document.querySelector('.floating-booking');
 const cover = document.querySelector('#home');
-const bookingSection = document.querySelector('#booking');
 const siteHeader = document.querySelector('header');
 
-function updateMobileBooking() {
+function updateFloatingBooking() {
   const headerBottom = siteHeader.getBoundingClientRect().bottom;
   const coverBottom = cover.getBoundingClientRect().bottom;
-  const bookingBounds = bookingSection.getBoundingClientRect();
-  const bookingVisible = bookingBounds.bottom > headerBottom &&
-    bookingBounds.top < window.innerHeight;
-  mobileBooking.hidden = coverBottom > headerBottom || bookingVisible;
+  floatingBooking.hidden = coverBottom > headerBottom;
 }
 
 let bookingFrame = 0;
@@ -40,7 +36,7 @@ function scheduleBookingUpdate() {
   if (bookingFrame) return;
   bookingFrame = requestAnimationFrame(() => {
     bookingFrame = 0;
-    updateMobileBooking();
+    updateFloatingBooking();
   });
 }
 
